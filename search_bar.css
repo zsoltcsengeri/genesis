@@ -1,0 +1,55 @@
+.header-menu-search-bar {
+  position: relative;
+}
+.header-menu-search-bar form#gnbSearchForm {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  padding: 0 20px;
+  background: #000;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  visibility: hidden;
+}
+.header-menu-search-bar label[for=search-bar-trigger-button] {
+  height: 80px;
+  line-height: 80px;
+  width: 30px;
+  display: block;
+  float: right;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+.header-menu-search-bar label[for=search-bar-trigger-button] .icon {
+  width: 100%;
+  height: 100%;
+  float: left;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(/content/dam/genesis/ca/images/find/search2x.png) 50% 45% no-repeat;
+  background-size: 30px auto;
+}
+.header-menu-search-bar label[for=search-bar-trigger-button]:hover .icon, .header-menu-search-bar label[for=search-bar-trigger-button]:focus .icon {
+  background-image: url(/content/dam/genesis/ca/images/find/search2x-hover.png);
+}
+.header-menu-search-bar #search-bar-trigger-button {
+  opacity: 0;
+}
+.header-menu-search-bar #search-bar-trigger-button:checked + label + form#gnbSearchForm {
+  max-height: 71px;
+  padding-bottom: 20px;
+  visibility: visible;
+}
+.header-menu-search-bar #search-bar-trigger-button:checked + label .icon {
+  background-image: url(/content/dam/genesis/ca/images/common/btn_close_pop_w.png);
+  background-size: 20px auto;
+}
+.header-menu-search-bar #search-bar-trigger-button:checked + label:hover .icon, .header-menu-search-bar #search-bar-trigger-button:checked + label:focus .icon {
+  background-image: url(/content/dam/genesis/ca/images/common/btn_close_pop_w-hover.png);
+}
+
+/*# sourceMappingURL=search_bar.css.map */
